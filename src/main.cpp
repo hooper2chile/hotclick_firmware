@@ -1,3 +1,12 @@
+/**********************************************************************************************
+ * HotClick - IDIN: Temperature control PID System
+ * by Felipe Hooper <felipe.hooper.c@gmail.com>
+ * Electronic Engineer
+ *
+ **********************************************************************************************/
+
+
+
 #include<Arduino.h>
 #include<PID_v1.h>
 
@@ -6,16 +15,13 @@
 double pwm    = 0;
 double temp_m = 0;  //temp measure
 double temp_s = 0;  //temp setpoint
-
-
 double Kp=50, Ki=12, Kd=0.5;
 PID HC_PID(&temp_m, &pwm, &temp_s, Kp, Ki, Kd, DIRECT);
 
-
 void info() {
-  Serial.print("Temp_DS18B20:\t"); Serial.print(temp_m);
-  Serial.print("\tPWM Set:  ");    Serial.print(pwm);
-  Serial.print("\tTemp_SET:\t");   Serial.print(temp_s);
+  Serial.print("Temp_DS18B20:\t");  Serial.print(temp_m);
+  Serial.print("\tPWM Set:  "   );  Serial.print(pwm);
+  Serial.print("\tTemp_SET:\t"  );  Serial.print(temp_s);
   Serial.print("\n");
 }
 
@@ -28,14 +34,13 @@ void setup(){
   temp_s = 120;  //100 [ºC]
 }
 
-int i=0;
-int N=500;
+int i = 0;
+int N = 500;
 void loop() {
   //Code for measures
   for (i=0; i<N; i++)
     temp_m += analogRead(A4);
   temp_m = 0.488*temp_m/N;
-
   //Code for PID
   HC_PID.Compute();
   pwm = (int) pwm;

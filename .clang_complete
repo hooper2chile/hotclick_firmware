@@ -1,8 +1,8 @@
 -I/Users/hooper/.platformio/packages/framework-arduinoavr/cores/arduino
 -I/Users/hooper/.platformio/packages/framework-arduinoavr/variants/eightanaloginputs
--I/Users/hooper/Dropbox/hotclick/firmware/src
--I/Users/hooper/Dropbox/hotclick/firmware/lib/pid
--I/Users/hooper/Dropbox/hotclick/firmware/lib/pid
+-I/Users/hooper/Dropbox/HotClick/firmware/lib/pid
+-I/Users/hooper/Dropbox/HotClick/firmware/src
+-I/Users/hooper/Dropbox/HotClick/firmware/lib/pid
 -I/Users/hooper/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/EEPROM/src
 -I/Users/hooper/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/HID/src
 -I/Users/hooper/.platformio/packages/framework-arduinoavr/libraries/__cores__/arduino/SPI/src
@@ -32,9 +32,8 @@
 -I/Users/hooper/.platformio/packages/toolchain-atmelavr/avr/include
 -I/Users/hooper/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include
 -I/Users/hooper/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/4.9.2/include-fixed
--I/Users/hooper/.platformio/packages/tool-unity
 -DF_CPU=16000000L
--DPLATFORMIO=30500
+-DPLATFORMIO=30300
 -DARDUINO_ARCH_AVR
 -DARDUINO_AVR_NANO
 -DARDUINO=10619
